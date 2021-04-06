@@ -718,14 +718,14 @@ export class Slider extends PureComponent<SliderProps, SliderState> {
                                 : this._renderThumbImage(i)}
                         </Animated.View>
                     ))}
-                    <View
-                        style={[styles.touchArea, touchOverflowStyle]}
-                        {...this._panResponder.panHandlers}>
-                        {!!debugTouchArea &&
-                            interpolatedThumbValues.map((value, i) =>
-                                this._renderDebugThumbTouchRect(value, i),
-                            )}
-                    </View>
+                </View>
+                <View
+                    style={[styles.touchArea, touchOverflowStyle]}
+                    {...this._panResponder.panHandlers}>
+                    {!!debugTouchArea &&
+                        interpolatedThumbValues.map((value, i) =>
+                            this._renderDebugThumbTouchRect(value, i),
+                        )}
                 </View>
             </>
         );
